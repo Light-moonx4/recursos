@@ -1,0 +1,137 @@
+📄 Documentación del Sistema de Consumo de Recursos
+1. Descripción del Programa
+
+El programa simula un sistema de supervivencia donde un grupo de 5 personas consume recursos diarios (comida, agua y energía).
+El usuario selecciona una dificultad (facil, media o dificil), lo cual determina la cantidad inicial de recursos disponibles.
+
+El sistema ahora funciona correctamente según la lógica definida.
+
+
+
+
+
+
+
+
+
+
+# EVENTO ALEATORIO
+if random.random() < probabilidad_evento:
+    evento = random.choice(eventos)
+    print("Evento del día:", evento)
+
+    if evento == "Small Supply Loss":
+        perdida = random.randint(2,4)
+        comida -= perdida
+        print("Se perdieron", perdida, "de comida")
+
+    elif evento == "Minor Generator Glitch":
+        perdida = random.randint(2,3)
+        energia -= perdida
+        print("Se perdieron", perdida, "de energía")
+
+    # sigues con los demás eventos...
+
+else:
+    print("Día tranquilo.")
+
+
+
+
+
+
+
+
+**🟢 MODO FÁCIL**
+
+**Small Supply Loss**
+
+Comida: 2–4
+
+**Minor Generator Glitch**
+
+Energía: 2–3
+
+**Short Water Leak**
+
+Agua: 2–4
+
+**Mild Illness**
+
+1 sobreviviente pierde 1–2 vida
+
+**Equipment Damage**
+
+Energía: 2–4
+
+** 	Cold Night**
+
+Todos pierden 1 vida
+
+**🟡 MODO NORMAL**
+
+**Raiders Steal Supplies**
+
+Comida: 4–6
+
+Energía: 2–4
+
+**Radiation Exposure**
+
+Todos pierden 1–3 vida
+
+**Water System Failure**
+
+Agua: 4–6
+
+**Generator Breakdown**
+
+Energía: 4–6
+
+**Internal Fight**
+
+1 pierde 2–4 vida
+
+**Food Spoilage**
+
+Comida: 4–6
+
+**Medical Emergency**
+
+1 pierde 3–5 vida
+
+**🔴 MODO DIFÍCIL**
+
+**Armed Invasion**
+
+Comida: 5–8
+
+Energía: 4–6
+
+**Severe Radiation Storm**
+
+Energía: 3–5
+
+Todos pierden 2–4 vida
+
+**Total Generator Collapse**
+
+Energía: 6–9
+
+**Deadly Epidemic**
+
+Todos pierden 3–5 vida
+
+**Mass Water Contamination**
+
+Agua: 5–8
+
+**Structural Collapse**
+
+Energía: 4–7
+
+1 pierde 3–5 vida
+
+**Toxic Gas Leak**
+
+Todos pierden 2–4 vida
