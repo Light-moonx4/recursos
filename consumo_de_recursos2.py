@@ -1,3 +1,4 @@
+import random
 dificultad = input("Elige dificultad (facil, media, dificil): ")
 
 # recursos y consumos según dificultad
@@ -8,29 +9,36 @@ if dificultad == "facil":
     personas = 10
     salud = 100
     dano = 10   # daño cuando falta recurso
-
+    probabilidad_evento = 0.7  # probabilidad de eventos aleatorios
+    if random.random() < probabilidad_evento:
+        evento = random.choice(["Small Supply Loss","Minor Generator Glitch","Short Water Leak",
+                                "Mild Illness","Equipment Damage","Cold Night"])
+        print("Evento del dia:", evento)
+        
+    
 elif dificultad == "media":
-    comida = 50
-    agua = 50
-    energia = 50
+    comida = 60
+    agua = 60
+    energia = 60
     personas = 5
-    salud = 50
+    salud = 60
     dano = 5    # menos daño
+    probabilidad_evento = 0.5  # probabilidad de eventos aleatorios
 
 elif dificultad == "dificil":
-    comida = 20
-    agua = 20
-    energia = 20
+    comida = 35
+    agua = 35
+    energia = 35
     personas = 2
-    salud = 20
+    salud = 50
     dano = 3    # aún menos daño
+    probabilidad_evento = 0.4  # probabilidad de eventos aleatorios
 
 comida_consumida = 1
 consumo_agua = 1
 consumo_energia = 1
 
 dia = 1
-
 while salud > 0:
 
     print("\nDía", dia)
@@ -64,4 +72,4 @@ while salud > 0:
 
     dia += 1
 
-print("\nLa colonia ha colapsado 💀")
+print("\nLa colonia ha colapsado")
